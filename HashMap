@@ -1,0 +1,22 @@
+import java.util.HashMap;
+import java.util.Map;
+public class HashMapEX1 {
+    public static void main(String[] args){
+        Map<Integer, String> map1 = new HashMap<>();
+        map1.put(999, "Stas Baretsky");
+        map1.put(666, "Ozzy Osborne");
+        map1.put(228, "Jmishenko Valeriy");
+        map1.put(421, "Sanya Sosat");
+        System.out.println("Размер хеша = " + map1.size());
+        System.out.println("значение элемента с ключом 999 = " + map1.get(999));
+        System.out.println("Удалим элемент с ключом 666");
+        map1.remove(666);
+        System.out.println("HashMap имеет следующий вид: " + map1);
+        System.out.println("Присутствует ли элемент со значением Ozzy Osborne? " + map1.containsValue("Ozzy Osborne"));
+        System.out.println("Присутствует ли элемент с ключом 421? " + map1.containsKey(421));
+        System.out.println("Значения всех ключей: " + map1.keySet());
+        System.out.println("Значения всех элементов" + map1.values());
+        map1.clear();
+        System.out.println("HashMap пустой? " + map1.isEmpty());
+    }
+}
